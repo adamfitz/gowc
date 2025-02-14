@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"time"
+
+	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"
 	"fyne.io/fyne/v2/container"
 	"fyne.io/fyne/v2/widget"
@@ -11,6 +13,8 @@ import (
 func main() {
 	myApp := app.New()
 	myWindow := myApp.NewWindow("World Clock")
+	// center window on startup
+	myWindow.CenterOnScreen()
 
 	// Simulating multiple timezones
 	timezones := []string{"UTC", "Asia/Kolkata", "Europe/Berlin", "America/New_York", "Australia/Sydney"}
